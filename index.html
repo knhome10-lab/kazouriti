@@ -1079,6 +1079,67 @@
     .floating-line,
     #line { display: none !important; }
 
+    /* ========== FLOW ========== */
+    .flow-section { background: var(--green-light); }
+
+    .flow-steps {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flow-step {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      flex: 1;
+      min-width: 220px;
+      max-width: 280px;
+      border-top: 4px solid var(--green-mid);
+    }
+
+    .flow-icon { font-size: 2.4rem; margin-bottom: 12px; }
+
+    .flow-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--green-mid);
+      margin-bottom: 8px;
+    }
+
+    .flow-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .flow-desc {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    .flow-arrow {
+      font-size: 2rem;
+      color: var(--green-mid);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 700px) {
+      .flow-arrow { transform: rotate(90deg); }
+      .flow-steps { flex-direction: column; align-items: center; }
+      .flow-step { max-width: 100%; width: 100%; }
+    }
+
     /* ========== SCROLL ANIMATION ========== */
     .fade-in {
       opacity: 0;
@@ -1114,9 +1175,8 @@
     <div class="hero-content">
       <div class="hero-badge">🌿 埼玉県加須市・区画整理地 分譲中</div>
       <h1 class="hero-catch">
-        「余白」のある暮らしを<br>
-        <em>約65坪の広い敷地　区画整理地内</em><br>
-        全3区画　申込優先販売
+        子どもが走り回れる庭のある家。<br>
+        <em>65坪の整形地、残り3区画。</em>
       </h1>
       <p class="hero-sub">
         家族みんなが伸び伸びと暮らせる、整形・広々区画整理地
@@ -1430,6 +1490,39 @@
             <div class="property-th">加盟団体</div>
             <div class="property-td">（公社）全国宅地建物取引業保証協会会員　／　（公社）埼玉県宅地建物取引協会会員　／　（公社）首都圏不動産公正取引協議会加盟</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLOW ========== -->
+  <section class="flow-section">
+    <div class="container">
+      <div class="fade-in" style="text-align:center;">
+        <div class="section-label">FLOW</div>
+        <h2 class="section-title">お問い合わせから<br>ご購入までの流れ</h2>
+        <p class="section-desc" style="margin:0 auto 48px;">しつこい営業は一切ありません。安心してからご決断いただけます。</p>
+      </div>
+      <div class="flow-steps">
+        <div class="flow-step fade-in">
+          <div class="flow-icon">📩</div>
+          <div class="flow-num">STEP 1</div>
+          <h3 class="flow-title">お問い合わせ・資料請求</h3>
+          <p class="flow-desc">フォーム・お電話でお気軽にご連絡ください。資料を無料でお送りします。</p>
+        </div>
+        <div class="flow-arrow fade-in">→</div>
+        <div class="flow-step fade-in">
+          <div class="flow-icon">🏡</div>
+          <div class="flow-num">STEP 2</div>
+          <h3 class="flow-title">現地見学・ご相談（無料）</h3>
+          <p class="flow-desc">実際の土地をスタッフがご案内します。ご質問・ご不安もその場で解決できます。</p>
+        </div>
+        <div class="flow-arrow fade-in">→</div>
+        <div class="flow-step fade-in">
+          <div class="flow-icon">✅</div>
+          <div class="flow-num">STEP 3</div>
+          <h3 class="flow-title">ご納得いただけた方のみお申込み</h3>
+          <p class="flow-desc">無理なお勧めは一切しません。十分にご検討いただいた上でご判断ください。</p>
         </div>
       </div>
     </div>
