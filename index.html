@@ -707,14 +707,25 @@
 
     .lifestyle-card {
       text-align: center;
-      padding: 32px 20px;
       background: var(--white);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       border-top: 3px solid var(--green-mid);
+      overflow: hidden;
     }
 
-    .lifestyle-icon { font-size: 2.5rem; margin-bottom: 14px; }
+    .lifestyle-card-body {
+      padding: 24px 20px;
+    }
+
+    .lifestyle-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .lifestyle-icon { font-size: 2.5rem; margin-bottom: 14px; padding-top: 28px; }
 
     .lifestyle-title {
       font-family: 'Noto Serif JP', serif;
@@ -1310,24 +1321,32 @@
       </div>
       <div class="lifestyle-grid">
         <div class="lifestyle-card fade-in">
-          <div class="lifestyle-icon">🏠</div>
-          <div class="lifestyle-title">こだわりの注文住宅</div>
-          <p class="lifestyle-desc">広い敷地で間取りの自由度が高く、建築家と一緒に理想の家を設計できます</p>
+          <img src="house1.jpg" alt="こだわりの注文住宅イメージ" class="lifestyle-card-img">
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-title">こだわりの注文住宅</div>
+            <p class="lifestyle-desc">広い敷地で間取りの自由度が高く、建築家と一緒に理想の家を設計できます</p>
+          </div>
         </div>
         <div class="lifestyle-card fade-in">
           <div class="lifestyle-icon">🚗</div>
-          <div class="lifestyle-title">ガレージ付きの暮らし</div>
-          <p class="lifestyle-desc">愛車を2台以上停められる広い駐車場。趣味のバイクやアウトドア用品も余裕で収納</p>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-title">ガレージ付きの暮らし</div>
+            <p class="lifestyle-desc">愛車を2台以上停められる広い駐車場。趣味のバイクやアウトドア用品も余裕で収納</p>
+          </div>
         </div>
         <div class="lifestyle-card fade-in">
           <div class="lifestyle-icon">🌳</div>
-          <div class="lifestyle-title">緑ある庭での生活</div>
-          <p class="lifestyle-desc">子どもが思い切り遊べる庭、バーベキュースペース、家庭菜園など夢が広がります</p>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-title">緑ある庭での生活</div>
+            <p class="lifestyle-desc">子どもが思い切り遊べる庭、バーベキュースペース、家庭菜園など夢が広がります</p>
+          </div>
         </div>
         <div class="lifestyle-card fade-in">
           <div class="lifestyle-icon">👨‍👩‍👧‍👦</div>
-          <div class="lifestyle-title">伸び伸び子育て環境</div>
-          <p class="lifestyle-desc">隣家との距離感にゆとりがあり、のびのび育てられます</p>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-title">伸び伸び子育て環境</div>
+            <p class="lifestyle-desc">隣家との距離感にゆとりがあり、のびのび育てられます</p>
+          </div>
         </div>
       </div>
     </div>
