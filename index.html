@@ -700,45 +700,92 @@
 
     .lifestyle-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
       margin-top: 48px;
     }
 
     .lifestyle-card {
-      text-align: center;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
       background: var(--white);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border-top: 3px solid var(--green-mid);
+      border-left: 4px solid var(--green-mid);
       overflow: hidden;
-    }
-
-    .lifestyle-card-body {
-      padding: 24px 20px;
+      text-align: left;
     }
 
     .lifestyle-card-img {
-      width: 100%;
-      aspect-ratio: 16/9;
+      width: 42%;
+      flex-shrink: 0;
       object-fit: cover;
       display: block;
+      min-height: 140px;
     }
 
-    .lifestyle-icon { font-size: 2.5rem; margin-bottom: 14px; padding-top: 28px; }
+    .lifestyle-icon {
+      width: 42%;
+      flex-shrink: 0;
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green-light);
+      padding: 0;
+      min-height: 140px;
+    }
+
+    .lifestyle-card-body {
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .lifestyle-title {
       font-family: 'Noto Serif JP', serif;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--green-deep);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      line-height: 1.5;
     }
 
     .lifestyle-desc {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-mid);
       line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .lifestyle-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .lifestyle-card {
+        flex-direction: row;
+      }
+      .lifestyle-card-img,
+      .lifestyle-icon {
+        width: 38%;
+        min-height: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .lifestyle-card {
+        flex-direction: column;
+      }
+      .lifestyle-card-img {
+        width: 100%;
+        min-height: 180px;
+      }
+      .lifestyle-icon {
+        width: 100%;
+        min-height: 80px;
+      }
     }
 
     /* ========== CTA BANNER ========== */
@@ -1348,6 +1395,7 @@
             <p class="lifestyle-desc">隣家との距離感にゆとりがあり、のびのび育てられます</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
