@@ -738,6 +738,121 @@
       margin-top: 2px;
     }
 
+    /* 周辺施設グリッド */
+    .area-facilities {
+      margin-top: 56px;
+    }
+
+    .area-facilities-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .facility-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--green-mid);
+    }
+
+    .facility-card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .facility-icon {
+      font-size: 1.6rem;
+    }
+
+    .facility-category {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--green-mid);
+      letter-spacing: 0.08em;
+    }
+
+    .facility-list {
+      list-style: none;
+    }
+
+    .facility-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--bg-dark);
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .facility-list li:last-child { border-bottom: none; }
+
+    .facility-dist {
+      font-size: 0.75rem;
+      color: var(--green-mid);
+      font-weight: 700;
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+
+    /* 区画整理地メリットセクション */
+    .kukaku-merit {
+      background: var(--bg);
+      padding: 80px 24px;
+    }
+
+    .merit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .merit-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--green-mid);
+    }
+
+    .merit-card .merit-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .merit-card h4 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 8px;
+    }
+
+    .merit-card p {
+      font-size: 0.87rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+
+    @media (max-width: 768px) {
+      .area-inner { grid-template-columns: 1fr; gap: 32px; }
+      .area-map { height: 220px; font-size: 2rem; }
+    }
+
     /* ========== LIFESTYLE ========== */
     .lifestyle-section { background: var(--bg); }
 
@@ -1521,17 +1636,20 @@
       <div class="area-inner">
         <div class="fade-in">
           <div class="section-label">AREA GUIDE</div>
-          <h2 class="section-title">加須市で暮らす</h2>
+          <h2 class="section-title">加須市野中エリアで暮らす</h2>
           <p class="section-desc">
-            加須市は、埼玉の北東に位置する自然豊かなまち。
-            首都圏へのアクセスも確保しながら、のびのびとした生活を楽しめます。
+            加須市は埼玉県北東部に位置する自然豊かなまち。
+            東北自動車道・国道125号が通り、車での移動が快適。
+            大型商業施設・医療施設・公園が周辺に揃い、
+            子育て世代に選ばれ続けています。
           </p>
           <ul class="area-points">
-            <li>東武線栗橋駅から徒歩27分</li>
-            <li>国道125号・東北自動車道など幹線道路が充実</li>
-            <li>周辺にスーパー・ホームセンターなどが揃う</li>
-            <li>広い公園・自然環境でアウトドアライフも満喫</li>
-            <li>加須はうどんが名物、地域の食文化も豊か</li>
+            <li>東武日光線・伊勢崎線　東武動物公園駅まで約15分（車）</li>
+            <li>東北自動車道　久喜ICまで約15分（車）</li>
+            <li>国道125号・国道122号　アクセス良好</li>
+            <li>イオンモール羽生まで約15分（車）</li>
+            <li>加須市立の保育所・小中学校が充実</li>
+            <li>加須市民運動公園など広い公園が複数</li>
           </ul>
         </div>
         <div class="fade-in">
@@ -1544,6 +1662,92 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
+        </div>
+      </div>
+
+      <!-- 周辺施設グリッド -->
+      <div class="area-facilities fade-in">
+        <h3 class="area-facilities-title">周辺の生活施設</h3>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="facility-card-head">
+              <span class="facility-icon">🏫</span>
+              <span class="facility-category">教育施設</span>
+            </div>
+            <ul class="facility-list">
+              <li>加須市立北川辺小学校<span class="facility-dist">約1.5km</span></li>
+              <li>加須市立北川辺中学校<span class="facility-dist">約2.0km</span></li>
+              <li>加須市立麦倉小学校<span class="facility-dist">約2.5km</span></li>
+            </ul>
+          </div>
+          <div class="facility-card">
+            <div class="facility-card-head">
+              <span class="facility-icon">🛒</span>
+              <span class="facility-category">スーパー・商業施設</span>
+            </div>
+            <ul class="facility-list">
+              <li>とりせん加須駅前店<span class="facility-dist">約3.0km</span></li>
+              <li>カスミ加須駅前店<span class="facility-dist">約3.5km</span></li>
+              <li>イオンモール羽生<span class="facility-dist">約12km</span></li>
+            </ul>
+          </div>
+          <div class="facility-card">
+            <div class="facility-card-head">
+              <span class="facility-icon">🏥</span>
+              <span class="facility-category">医療施設</span>
+            </div>
+            <ul class="facility-list">
+              <li>加須市立医療センター<span class="facility-dist">約5.0km</span></li>
+              <li>埼玉医科大学総合医療センター<span class="facility-dist">約20km</span></li>
+              <li>周辺クリニック多数<span class="facility-dist">徒歩圏内</span></li>
+            </ul>
+          </div>
+          <div class="facility-card">
+            <div class="facility-card-head">
+              <span class="facility-icon">🌳</span>
+              <span class="facility-category">公園・施設</span>
+            </div>
+            <ul class="facility-list">
+              <li>加須市民運動公園<span class="facility-dist">約4.0km</span></li>
+              <li>大越運動公園<span class="facility-dist">約3.0km</span></li>
+              <li>利根川河川敷<span class="facility-dist">約2.0km</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 区画整理地メリット ========== -->
+  <section class="kukaku-merit">
+    <div class="container">
+      <div class="fade-in" style="text-align:center; max-width:600px; margin:0 auto 0;">
+        <div class="section-label">WHY 区画整理地</div>
+        <h2 class="section-title">区画整理地が選ばれる理由</h2>
+        <p class="section-desc" style="margin:0 auto;">
+          通常の土地とは異なる、区画整理地ならではの安心・安全なポイントをご紹介します
+        </p>
+      </div>
+      <div class="merit-grid">
+        <div class="merit-card fade-in">
+          <div class="merit-icon">📐</div>
+          <h4>整形地で設計の自由度が高い</h4>
+          <p>旗竿地や変形地と違い、整った長方形の土地なので間取りの制限がなく、理想の家を設計しやすいです。</p>
+        </div>
+        <div class="merit-card fade-in">
+          <div class="merit-icon">🛣️</div>
+          <h4>道路・インフラが整備済み</h4>
+          <p>区画整理事業により道路・上下水道・電気・ガスなどのインフラがすべて整備された状態でご購入いただけます。</p>
+        </div>
+        <div class="merit-card fade-in">
+          <div class="merit-icon">📋</div>
+          <h4>権利関係が明確で安心</h4>
+          <p>境界が確定しており、隣地との境界トラブルが起きにくく、将来的な売却・相続の際も安心です。</p>
+        </div>
+        <div class="merit-card fade-in">
+          <div class="merit-icon">🏘️</div>
+          <h4>街並みが統一されている</h4>
+          <p>計画的に整備された街区のため、道路幅や街並みが揃っており、快適で美しい住環境が保たれます。</p>
         </div>
       </div>
     </div>
