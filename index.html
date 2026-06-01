@@ -275,7 +275,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(30,60,10,0.72) 0%, rgba(50,90,20,0.55) 60%, rgba(80,130,40,0.45) 100%);
+      background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.40) 60%, rgba(0,0,0,0.35) 100%);
     }
 
     .hero-content {
@@ -283,8 +283,13 @@
       z-index: 1;
       max-width: 760px;
       margin: 0 auto;
-      padding: 80px 32px 60px;
+      padding: 56px 40px 48px;
       text-align: center;
+      background: rgba(0, 0, 0, 0.38);
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     }
 
     .hero-badge {
