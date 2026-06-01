@@ -646,6 +646,49 @@
       margin-top: 40px;
     }
 
+    .kukakuzu-img-wrap {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+    }
+
+    .kukakuzu-img-wrap img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .kukaku-stamp {
+      position: absolute;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 70px;
+      height: 70px;
+      font-size: 0.85rem;
+      line-height: 1.3;
+      transform: rotate(-15deg);
+      opacity: 0.92;
+      border-width: 3px;
+      border-style: solid;
+    }
+
+    .kukaku-stamp.sold {
+      background: rgba(192,57,43,0.12);
+      color: #C0392B;
+      border-color: #C0392B;
+    }
+
+    .kukaku-stamp.applied {
+      background: rgba(41,128,185,0.12);
+      color: #2980B9;
+      border-color: #2980B9;
+    }
+
     .kukakuzu-title {
       font-family: 'Noto Serif JP', serif;
       font-size: 1.1rem;
@@ -1623,7 +1666,11 @@
       <div class="kukakuzu-wrap fade-in">
         <h3 class="kukakuzu-title">区画図</h3>
         <div class="kukakuzu-box">
-          <img src="kukakuzu.jpg" alt="埼玉県加須市野中土地区画整理地 区画図" style="width:50%; border-radius:8px;">
+          <div class="kukakuzu-img-wrap">
+            <img src="kukakuzu.jpg" alt="埼玉県加須市野中土地区画整理地 区画図">
+            <!-- ①号地：成約スタンプ -->
+            <div class="kukaku-stamp sold" style="top:20%; left:15%;">成約</div>
+          </div>
         </div>
       </div>
 
