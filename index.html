@@ -1296,6 +1296,46 @@
     .floating-tel { background: var(--green-deep); }
     .floating-form { background: var(--gold); }
 
+    /* ========== TOPICS ========== */
+    .topics-section {
+      background: var(--bg-dark);
+      padding: 40px 24px;
+    }
+
+    .topics-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 4px solid var(--green-mid);
+    }
+
+    .topics-list {
+      list-style: none;
+      max-width: 700px;
+    }
+
+    .topics-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(74,122,40,0.15);
+      font-size: 0.88rem;
+      color: var(--text-mid);
+    }
+
+    .topics-list li:last-child { border-bottom: none; }
+
+    .topics-date {
+      color: var(--green-mid);
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
     /* ========== FOOTER ========== */
     footer {
       background: #1A3008;
@@ -2053,6 +2093,17 @@
           <button type="submit" class="btn-submit">📩 送信する</button>
         </form>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== TOPICS ========== -->
+  <section class="topics-section">
+    <div class="container">
+      <h2 class="topics-title">📋 トピックス</h2>
+      <ul class="topics-list">
+        <li><span class="topics-date">2026.06.01</span><span>1号地 ご成約となりました。誠にありがとうございました。</span></li>
+        <li><span class="topics-date">2026.05.01</span><span>ホームページを公開しました。</span></li>
+      </ul>
     </div>
   </section>
 
